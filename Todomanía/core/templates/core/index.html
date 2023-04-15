@@ -1,0 +1,145 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>TODOMANÍA</title>
+    <link rel="Stylesheet" href="{%static 'css/estilo.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <!--barra navegación con logo-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+
+                <img src="{%static 'core/img/mando.png'%}" alt="logo" width="30" height="24" class="d-inline-block align-text-top">                     
+                TODOMANÍA
+                <img src="{%static 'core/img/pngwing.com.png'%}" alt="logo" width="30" height="28" class="d-inline-block align-text-top">   
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" color=blue >
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                  </form>
+
+                <div class="navbar-nav ms-end">
+                    <a class="nav-link" href="{% url 'videojuegos' %}">VideoJuegos</a>
+                    <a class="nav-link" href="{% url 'maquetas' %}">Maquetas</a>
+                    <a class="nav-link" href="{% url 'cartasycoleccionables' %}">Cartas y coleccionables</a>
+                </div>
+
+                <div class="navbar-nav ms-auto">
+                  <a class="nav-link" href="{% url 'entrar' %}">Entrar</a>
+                  <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>
+                </div>                       
+
+            </div>
+
+                
+                
+            
+        </div>
+    </nav> 
+    <!--fin barra navegación con logo-->
+
+    <div class="container-fluid">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <a href="{% url 'videojuegos' %}">
+          <div class="carousel-item active" data-bs-interval="10000" > 
+            <img  src="{%static 'core/img/BOTW.jpg'%}"  class="d-block w-100" alt="" height="500px">   
+          </div>
+          </a>
+
+          <a href="{% url 'maquetas' %}">
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'core/img/rx78.jpg'%}"  class="d-block w-100" alt="..." height="1000px">
+          </div>
+          </a>
+          <a href="{% url 'cartasycoleccionables' %}">">
+          <div class="carousel-item">
+            <img src="{%static 'core/img/820650502835-1.jpg'%}"  class="d-block w-100" alt="..." height="500px" >
+          </div>
+          </a>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col-sm-4 col-sm-8 p-5">
+                  <div class="card">
+                    <a href="{% url 'pagconstruccion' %}">
+                    <img src="{%static 'core/img/bandai-pokemon-ho-oh_540x.jpg'%}" class="card-img-top" alt="..." height="182px">
+                    <div class="card-body">
+                      <h5 class="card-title">HO-OH</h5>
+                      <p class="card-text">Pokémon Model Kit - <br>Bandai.
+                      <br>$16.990</p>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4 col-sm-8 p-5">
+                  <div class="card">
+                    <a href="{% url 'pagconstruccion' %}">
+                    <img src="{%static 'core/img/BOTW.jpg'%}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">The legend of zelda BOTW</h5>
+                      <p class="card-text">The legend of zelda Breath of the wild.
+                        <br>$59.990</p>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4 col-sm-8 p-5">
+                  <div class="card">
+                    <a href="{% url 'pagconstruccion' %}">
+                    <img src="{%static 'core/img/mewtwo.jpg'%}" class="card-img-top" alt="..." height="182px">
+                    <div class="card-body">
+                      <h5 class="card-title">Pokémon</h5>
+                      <p class="card-text">Pokemon Go tcg
+                        <br>Elite trainer box. 
+                        <br>$45.990</p>
+                    </div>
+                    </a>
+                  </div>
+                </div>
+        </div>    
+    </div>
+
+
+
+    <!--JAVASCRIPT BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>    
+</body>
+</html>

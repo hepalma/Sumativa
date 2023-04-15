@@ -1,0 +1,45 @@
+a:link, a:visited {
+    text-decoration: none;
+    text-decoration-color: black;
+  }
+
+body {
+    background-color: rgb(223, 217, 217);
+    background-image: url(../img/WitchingHour.jpg );
+    background-size:cover;
+}
+
+.carousel-inner{
+    height: 500px;
+    position:relative;
+    top:20px;
+}
+
+.col{
+    text-decoration-color:black;
+}
+
+.carousel-caption{
+    color:whitesmoke;
+}
+
+ 
+
+.tituloreg {
+    Color:whitesmoke;
+    font-family:Bebas Neue;
+    font-size:70px;
+    text-align: center;
+    position:relative;
+
+}
+
+.container{
+    position:relative;
+    background-color: whitesmoke;
+    background-size:cover;
+    height: 600px;
+    background-position: center; 
+    background-size: cover;
+    border-radius: 20px 20px;
+}

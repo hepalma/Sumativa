@@ -1,0 +1,21 @@
+a:link, a:visited {
+    text-decoration: none;
+    text-decoration-color: black;   
+}
+
+body { text-decoration: none;
+    background-color: rgb(223, 217, 217);
+    background-image: url(../img/WitchingHour.jpg);
+    background-size:cover;
+}
+
+.carousel-inner{
+    height: 500px;
+    position:relative;
+    top:20px;
+}
+
+.container{
+    position:relative;
+    position:center;
+}

@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TODOMANÍA</title>
+    <link rel="Stylesheet" href="{%static 'css/estiloregis.css'%}">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+    <!-- BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <!--barra navegación con logo-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+
+                <img src="{%static 'core/img/mando.png'%}" alt="logo" width="30" height="24" class="d-inline-block align-text-top">                     
+                TODOMANÍA
+                <img src="{%static 'core/img/pngwing.com.png'%}" alt="logo" width="30" height="28" class="d-inline-block align-text-top">   
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" color=blue >
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+                <div class="navbar-nav ms-end">
+                    <a class="nav-link" href="{% url 'videojuegos' %}">VideoJuegos</a>
+                    <a class="nav-link" href="{% url 'maquetas' %}">Maquetas</a>
+                    <a class="nav-link" href="{% url 'cartasycoleccionables' %}">Cartas y coleccionables</a>
+                </div>
+
+                
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link" href="{% url 'entrar' %}">Entrar</a>
+                    <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>             
+                </div>
+                
+                
+            
+        </div>
+    </nav> 
+    <!--fin barra navegación con logo-->
+
+<h1 class="tituloreg">Registrar</h1>    
+<div class="container">
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-sm-3 col-sm-3 p-2">
+        <label for="validationCustom01" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="validationCustom01" value="" required>
+        <div class="valid-feedback">
+            Cumple con el requisito!
+        </div>
+        </div>
+        <div class="col-sm-3 col-sm-3 p-2">
+        <label for="validationCustom02" class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="validationCustom02" value="" required>
+        <div class="valid-feedback">
+            Cumple con el requisito!
+        </div>
+        </div>
+        <div class="col-sm-3 col-sm-3 p-2">
+            <label for="validationCustom02" class="form-label">Correo Electronico</label>
+            <input type="text" class="form-control" id="validationCustom02" value="" required>
+            <div class="valid-feedback">
+                Cumple con el requisito!
+            </div>
+            </div>
+
+        <div class="col-sm-3 col-sm-3 p-2">
+        <label for="validationCustomUsername" class="form-label">Nombre de usuario</label>
+        <div class="input-group has-validation">
+            <span class="input-group-text" id="inputGroupPrepend">@</span>
+            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+            Por favor elige un nombre de usuario.
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-3 col-sm-3 p-2">
+            <label for="validationCustom02" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="validationCustom02" value="" required>
+            <div class="valid-feedback">
+                Cumple con el requisito!
+            </div>
+            </div>
+        <div class="col-sm-8 col-sm-8 p-2">
+        <label for="validationCustom03" class="form-label">Ciudad</label>
+        <input type="text" class="form-control" id="validationCustom03" required>
+        <div class="invalid-feedback">
+            Por favor selecione una ciudad valido.
+        </div>
+        </div>
+        <div class="col-sm-8 col-sm-8 p-2">
+        <label for="validationCustom04" class="form-label">Region</label>
+        <select class="form-select" id="validationCustom04" required>
+            <option selected disabled value="">Selecciona...</option>
+            <option>Region de Arica y Parinacota</option>
+            <option>Region de Tarapaca</option>
+            <option>Region de antofagasta</option>
+            <option>Region de Atacama</option>
+            <option>Region de Coquimbo</option>
+            <option>Region de Valparaiso</option>
+            <option>Region Metropolitana</option>
+            <option>Region del libertador Bernardo Ohiggins</option>
+            <option>Region del Maule</option>
+            <option>Region de Ñuble</option>
+            <option>Region del Biobio</option>
+            <option>Region de la Araucania</option>
+            <option>Region de los Rios</option>
+            <option>Region de los Lagos</option>
+            <option>Region de Aysen</option>
+            <option>Region de Magallanes</option>
+        
+        </select>
+        <div class="invalid-feedback">
+            Seleciona una Region.
+        </div>
+        </div>
+        <div class="col-sm-8 col-sm-8 p-2">
+        <label for="validationCustom05" class="form-label">Codigo Postal</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+            Seleciona un codigo postal.
+        </div>
+        </div>
+        <div class="col-sm-8 col-sm-8 p-2">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+            <label class="form-check-label" for="invalidCheck">
+            Aceptar terminos y condiciones
+            </label>
+            <div class="invalid-feedback">
+            Debe aceptar los terminos y condicioes para continuar.
+            </div>
+        </div>
+        </div>
+        <div class="col-sm-8 col-sm-8 p-2">
+        <button class="btn btn-primary" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
+<script>
+// Example starter JavaScript for disabling form submissions if there are invalid fields
+        (() => {
+        'use strict'
+        
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+        
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+        
+            form.classList.add('was-validated')
+            }, false)
+        })
+        })()</script>
+
+        
+    <!--JAVASCRIPT BOOTSTRAP-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>    
+</body>
+</html>

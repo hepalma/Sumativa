@@ -1,0 +1,41 @@
+
+a:link, a:visited {
+    text-decoration: none;
+    text-decoration-color: black;   
+}
+
+body { 
+    text-decoration: none;
+    background-color: rgb(223, 217, 217);
+    background-image: url(../img/WitchingHour.jpg);
+    background-size:cover;
+}
+
+.carousel-inner{
+    height: 500px;
+    position:relative;
+    top:20px;
+}
+
+.col{
+    text-decoration-color:black;
+}
+
+.carousel-caption{
+    color:whitesmoke;
+}
+
+.card{
+    width:350px;
+    height: 350px;
+    position: relative;
+    top:-50px;
+    
+}
+
+.card-body{
+    max-height: 150px;
+    min-height: 150px;
+    text-decoration: none;
+    text-decoration-color: black;
+}   
