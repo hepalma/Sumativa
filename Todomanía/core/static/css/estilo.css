@@ -39,3 +39,17 @@ body {
     text-decoration: none;
     text-decoration-color: black;
 }   
+
+input[type="search"]{
+    padding: 10px;
+}
+
+a.search{
+    width:90%;
+    max-width:1000px;
+    margin:auto;
+    background: #fff;
+    padding:0 10px;
+    padding-bottom: 5px;
+    display:none;
+}

@@ -9,21 +9,6 @@ body {
     background-size:cover;
 }
 
-.carousel-inner{
-    height: 500px;
-    position:relative;
-    top:20px;
-}
-
-.col{
-    text-decoration-color:black;
-}
-
-.carousel-caption{
-    color:whitesmoke;
-}
-
- 
 
 .tituloreg {
     Color:whitesmoke;
@@ -34,12 +19,3 @@ body {
 
 }
 
-.container{
-    position:relative;
-    background-color: whitesmoke;
-    background-size:cover;
-    height: 600px;
-    background-position: center; 
-    background-size: cover;
-    border-radius: 20px 20px;
-}

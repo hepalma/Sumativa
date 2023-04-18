@@ -20,9 +20,9 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}">
 
-                <img src="{%static 'core/img/mando.png'%}" alt="logo" width="30" height="24" class="d-inline-block align-text-top">                     
+                <img src="{%static 'img/mando.png'%}" alt="logo" width="30" height="24" class="d-inline-block align-text-top">                     
                 TODOMANÍA
-                <img src="{%static 'core/img/pngwing.com.png'%}" alt="logo" width="30" height="28" class="d-inline-block align-text-top">   
+                <img src="{%static 'img/pngwing.com.png'%}" alt="logo" width="30" height="28" class="d-inline-block align-text-top">   
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -42,8 +42,16 @@
                 
 
                 <div class="navbar-nav ms-auto">
-                  <a class="nav-link" href="{% url 'entrar' %}">Entrar</a>
-                  <a class="nav-link" href="{% url 'registrar' %}">Registrarse</a>            
+
+                  
+                  {% if user.is_authenticated %}
+                    <a class="nav-link" href=""> Usuario:{{ user.username}}</a>
+                    <a class="nav-link" href="{% url 'logout' %}"> Cerrar sesión</a>
+                  {% else %}
+                  <a class="nav-link" href="{% url 'login' %}">Entrar</a>
+                  <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>    
+                  {% endif %}     
+                  </div>    
                 </div>
                 
             
@@ -58,7 +66,7 @@
             <div class="col-sm-4 col-sm-8 p-1">
               <div class="card">
                 <a href="{% url 'pagconstruccion' %}">
-                <img src="{%static 'core/img/rx78.jpg'%}" class="card-img-top" alt="..." style="height:400px">
+                <img src="{%static 'img/rx78.jpg'%}" class="card-img-top" alt="..." style="height:400px">
                 <div class="card-body">
                   <h5 class="card-title">RX-78-2 GUNDAM</h5>
                   <p class="card-text">ENTRY GRADE - 1/144 RX-78-2 GUNDAM (3L) - Model Kit Articulado - Bandai.
@@ -72,7 +80,7 @@
             <div class="col-sm-4 col-sm-8 p-1">
               <div class="card">
                 <a href="{% url 'pagconstruccion' %}">
-                <img src="{%static 'core/img/bandai-pokemon-ho-oh_540x.jpg'%}" class="card-img-top" alt="..." style="height:400px">
+                <img src="{%static 'img/bandai-pokemon-ho-oh_540x.jpg'%}" class="card-img-top" alt="..." style="height:400px">
                 <div class="card-body">
                   <h5 class="card-title">HO-OH</h5>
                   <p class="card-text">Pokémon Model Kit - <br>Bandai.
@@ -87,7 +95,7 @@
             <div class="col-sm-4 col-sm-8 p-1">
               <div class="card">
                 <a href="{% url 'pagconstruccion' %}">
-                <img src="{%static 'core/img/gundam.jpg'%}" class="card-img-top" alt="..." style="height:400px">
+                <img src="{%static 'img/gundam.jpg'%}" class="card-img-top" alt="..." style="height:400px">
                 <div class="card-body">
                   <h5 class="card-title">SD SANGOKU SOKETSUDEN</h5>
                   <p class="card-text"> Long Xian Liu Bei UNICORN GUNDAM - Model Kit Articulado - Bandai
@@ -102,7 +110,7 @@
             <div class="col-sm-4 col-sm-8 p-1">
               <div class="card">
                 <a href="{% url 'pagconstruccion' %}">
-                <img src="{%static 'core/img/bans62177_0_720x.jpg'%}" class="card-img-top" alt="..." style="height:400px">
+                <img src="{%static 'img/bans62177_0_720x.jpg'%}" class="card-img-top" alt="..." style="height:400px">
                 <div class="card-body">
                   <h5 class="card-title">Cinderace</h5>
                   <p class="card-text">Pokemon Model Kit - <br>Bandai.
