@@ -1,5 +1,12 @@
 from django.urls import path, include
 from . import views
+from.views import productosViewset, CategoriaproductosViewset
+from rest_framework import routers
+
+
+router = routers.DefaultRouter()
+router.register('productos', productosViewset)
+router.register('Categoriaproductos', CategoriaproductosViewset)
 
 
 urlpatterns = [
@@ -11,5 +18,6 @@ urlpatterns = [
     path('registrar', views.registrar, name='registrar'),
     path('pagconstruccion', views.pagconstruccion, name='pagconstruccion'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('registro/', views.registro, name="registro")
+    path('registro/', views.registro, name="registro"),
+    path('api/', include(router.urls)),
 ]
